@@ -2,7 +2,7 @@ class UserPrototype {
     UserBehavior userBehavior;
 
     protected void disPlay(){
-        userBehavior.fly();
+        userBehavior.showRight();
     }
 
     public void setUserBehavior(UserBehavior userBehavior) {
