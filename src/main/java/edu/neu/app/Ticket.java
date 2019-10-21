@@ -6,6 +6,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import java.util.Random;
 
+import org.hibernate.annotations.DynamicUpdate;
+
 @Entity
 @Table(name = "Ticket")
 public class Ticket {
