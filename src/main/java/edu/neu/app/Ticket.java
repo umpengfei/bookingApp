@@ -10,6 +10,10 @@ import org.hibernate.annotations.DynamicUpdate;
 
 @Entity
 @Table(name = "Ticket")
+
+// @DynamicUpdate - Mean the update sql statement is generated at runtime and contains only those columns whose values have changed.
+@DynamicUpdate(value=true)
+
 public class Ticket {
     @Id
     @Column(name = "id")
