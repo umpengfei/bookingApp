@@ -7,7 +7,7 @@ import java.util.Random;
 
 @Entity
 @Table(name = "User")
-public class User implements BasicFunction {
+public class User extends UserPrototype implements BasicFunction {
     @Id
     @Column(name = "id")
     private int id;
@@ -29,12 +29,13 @@ public class User implements BasicFunction {
         this.id = random.nextInt() & Integer.MAX_VALUE;
     }
 
-    public User(String name, int age, int money) {
+    public User(String name, int age, int money, UserBehavior userBehavior) {
         Random random = new Random();
         this.id = random.nextInt() & Integer.MAX_VALUE;
         this.name = name;
         this.age = age;
         this.money = money;
+        setUserBehavior(userBehavior);
     }
 
     @Override
@@ -80,5 +81,6 @@ public class User implements BasicFunction {
     public void setList(List<Ticket> list) {
         this.list = list;
     }
-
+    
+    display();
 }
