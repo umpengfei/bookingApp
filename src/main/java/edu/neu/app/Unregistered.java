@@ -1,3 +1,4 @@
+// instantiate one strategy
 public class Unregistered implements UserBehavior {
     // another strategy
     @Override
