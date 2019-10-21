@@ -12,6 +12,10 @@ public class Ticket {
     @Id
     @Column(name = "id")
     private int id;
+    
+    //Hibernate will check this version
+    @Version
+    private long version;
 
     @Column(name = "userId")
     private int userId;
@@ -61,6 +65,10 @@ public class Ticket {
     public int getId() {
         return id;
     }
+    
+    public long getVersion() {
+        return version;
+    }
 
     public int getUserId() {
         return userId;
@@ -92,6 +100,10 @@ public class Ticket {
 
     public void setId(int id) {
         this.id = id;
+    }
+    
+    pulic void setVersion(long version) {
+        this.version = version;
     }
 
     public void setUserId(int id) {
