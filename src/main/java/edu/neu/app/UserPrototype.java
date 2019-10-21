@@ -1,3 +1,4 @@
+// parent class to apply strategy design pattern
 class UserPrototype {
     UserBehavior userBehavior;
 
